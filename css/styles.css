@@ -107,6 +107,7 @@ main,
     max-height: 200px;
     width: 100%;
     object-fit: cover;
+    object-position: left;
     border-radius: 10px 10px 0 0;
 }
 
@@ -244,6 +245,10 @@ MEDIA QUERIES
         width: 55%;
     }
 
+    .article-title {
+        font-size: 1.25rem;
+    }
+
     .article-overlay {
         border-radius: 10px;
         width: max-content;
@@ -278,12 +283,18 @@ MEDIA QUERIES
     .img-hero {
         width: 100%;
         min-height: 100%;
+        object-fit: cover;
+        object-position: left;
         border-radius: 10px 0 0 10px;
     }
 
     article {
         width: 60%;
         border-radius: 0 10px 10px 0;
+    }
+
+    .article-title {
+        font-size: 1.25rem;
     }
 
     .article-overlay {
