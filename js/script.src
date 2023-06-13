@@ -1,0 +1,31 @@
+const button = document.querySelector(".author-share-btn");
+const articleAuthor = document.querySelector(".article-author");
+const articleAuthorOverlay = document.querySelector(".article-overlay");
+const buttonSvgPathColor = document.querySelector(".author-share-btn svg path");
+const triangle = document.querySelector(".triangle");
+
+
+
+
+    button.addEventListener("click", (e) => {
+
+        if ([...articleAuthorOverlay.classList].includes("transparent") && [...articleAuthorOverlay.classList].includes("hidden")) {
+            console.log("con1 fired");
+            articleAuthorOverlay.classList.remove("hidden");
+            setTimeout(() => {
+                button.classList.add("author-share-btn-dark");
+                buttonSvgPathColor.style.fill = "hsl(210, 46%, 95%)";
+                articleAuthorOverlay.classList.remove("transparent"), 0
+            });
+        } else {
+            console.log("con2 fired");
+            button.classList.remove("author-share-btn-dark");
+            buttonSvgPathColor.style.fill = "hsl(214, 17%, 51%)";
+            articleAuthorOverlay.classList.add("transparent");
+            articleAuthorOverlay.addEventListener('transitionend', function(e) {
+            articleAuthorOverlay.classList.add('hidden');
+            }, {
+                once: true,
+                });
+            }
+        });
