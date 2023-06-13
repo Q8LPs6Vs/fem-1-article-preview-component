@@ -280,6 +280,10 @@ MEDIA QUERIES
         width: 40%;
     }
 
+    .content-wrapper {
+        margin: 2em 2em 0 2em;
+    }
+
     .img-hero {
         width: 100%;
         min-height: 100%;
