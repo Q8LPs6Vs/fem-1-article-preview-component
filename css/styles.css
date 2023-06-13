@@ -293,6 +293,10 @@ MEDIA QUERIES
         border-radius: 0 10px 10px 0;
     }
 
+    .article-author {
+        padding: 1em 2em 2em 2em;
+    }
+
     .article-title {
         font-size: 1.25rem;
     }
